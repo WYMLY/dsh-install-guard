@@ -1,0 +1,40 @@
+{
+  "name": "dsh-install-guard",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "装东西之前先体检 · Install Guard for DSH: hash/signature/installer checks on a downloaded binary, an autostart baseline and diff around an install, and a hash sweep for known-bad payloads. Read-only, ships the install-safety-check playbook.",
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "security",
+    "malware",
+    "install",
+    "supply-chain",
+    "defender"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "GUIDE.md",
+    "scripts/*.ps1",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

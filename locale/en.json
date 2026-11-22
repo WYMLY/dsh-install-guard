@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Install Guard",
+    "description": "Look before you install: hash, signature, installer format and embedded URLs, startup entries before vs after, plus a hash sweep for leftovers. Read-only."
+  }
+}
