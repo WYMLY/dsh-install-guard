@@ -79,7 +79,7 @@ SHA256  91FD8671CAA99BDA...
 
 ```
 index.js              工具注册、报告排版、Node 侧哈希与签名
-cordis.patch.yml      insert install-guard → dsh-install-guard
+cordis.patch.yml      insert install-guard → @wymly/dsh-install-guard
 GUIDE.md              完整检查清单（随插件分发）
 scripts/inspect.ps1   Windows 侧文件体检的原始脚本
 scripts/snapshot.ps1  自启与网络基线
@@ -91,17 +91,23 @@ icon.svg              盾牌 + 对勾 + 一片鱼鳍
 
 ## 安装
 
-profile 里以 `link:` 依赖挂着：
+从 npm 装（推荐，谁都能用）：
 
 ```
-plugin_manager action=install_bundle target=D:\dafeiyu-config-pack\plugins\dsh-install-guard
+plugin_manager action=install_bundle target=@wymly/dsh-install-guard
+```
+
+或者从本地目录装（改代码时用这个，profile 里以 `link:` 依赖挂着）：
+
+```
+plugin_manager action=install_bundle target=D:\path\to\dsh-install-guard
 ```
 
 改完 `index.js` 不会热重载，要禁用再启用：
 
 ```
-plugin_manager action=set_bundle target=dsh-install-guard enabled=false
-plugin_manager action=set_bundle target=dsh-install-guard enabled=true
+plugin_manager action=set_bundle target=@wymly/dsh-install-guard enabled=false
+plugin_manager action=set_bundle target=@wymly/dsh-install-guard enabled=true
 ```
 
 ## 还想上市场

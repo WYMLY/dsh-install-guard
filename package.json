@@ -1,6 +1,18 @@
 {
-  "name": "dsh-install-guard",
-  "version": "0.1.1",
+  "name": "@wymly/dsh-install-guard",
+  "version": "0.1.3",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WYMLY/dsh-install-guard.git"
+  },
+  "homepage": "https://github.com/WYMLY/dsh-install-guard#readme",
+  "bugs": {
+    "url": "https://github.com/WYMLY/dsh-install-guard/issues"
+  },
   "type": "module",
   "description": "装东西之前先体检 · Install Guard for DSH: hash/signature/installer checks on a downloaded binary, an autostart baseline and diff around an install, and a hash sweep for known-bad payloads. Read-only, ships the install-safety-check playbook.",
   "license": "MIT",
@@ -30,7 +42,8 @@
     "scripts/*.ps1",
     "locale/*.json",
     "icon.svg",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "dsh": {
     "bundle": {
